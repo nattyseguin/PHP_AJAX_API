@@ -1,0 +1,3 @@
+42.343307#-7.852864#Mercadona#http://www.mercadona.es
+42.343640#-7.855607#Diverbolos#http://www.facebook.com/Diverbolos
+42.343415#-7.857729#Rebusca46#http://www.rebusca46.es

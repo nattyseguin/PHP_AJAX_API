@@ -1,0 +1,37 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <script>
+    function showUser(str) {
+        if (str == "") {
+            document.getElementById("txtHint").innerHTML = "";
+            return;
+        } else {
+            xmlhttp = new XMLHttpRequest();
+         
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET","modulos.php?q="+str,true);
+            xmlhttp.send();
+        }
+    }
+    </script>
+    </head>
+    <body>
+    
+    <form>
+    <select name="ciclos" onchange="showUser(this.value)">
+      <option value="">Select a Ciclo Superior:</option>
+      <option value="1">Desarrollo de Aplicaciones Web</option>
+      <option value="2">Desarrollo de Aplicaciones Multiplataforma</option>
+      <option value="3">ASIR</option>
+      </select>
+    </form>
+    <br>
+    <div id="txtHint"><b>Here you will see...</b></div>
+    
+    </body>
+    </html>
